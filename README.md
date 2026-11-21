@@ -39,7 +39,13 @@ uv run --with esptool esptool --port COM3 flash-id
 ### Lチカ（MicroPythonスクリプト実行）
 ESP32 内蔵LED (GPIO 2) を 0.5 秒間隔で 10 回点滅させます。
 ```powershell
-uv run --with mpremote mpremote connect COM3 run blink.py
+uv run mpremote connect COM3 run blink.py
+```
+
+### BOOTボタンでLED制御
+基板上の [BOOT] ボタンを押している間だけLEDを点灯させます。
+```powershell
+uv run mpremote connect COM3 run button_led.py
 ```
 
 ### MicroPython インタラクティブ REPL 接続
