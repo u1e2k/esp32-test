@@ -1,0 +1,7 @@
+# MicroPython Firmware
+firmware.bin
+
+# Python cache & uv
+__pycache__/
+.venv/
+.uv/

@@ -30,7 +30,19 @@ uv run --with esptool esptool --port COM3 chip-id
 uv run --with esptool esptool --port COM3 flash-id
 ```
 
-### シリアルモニタ接続
+### Lチカ（MicroPythonスクリプト実行）
+ESP32 内蔵LED (GPIO 2) を 0.5 秒間隔で 10 回点滅させます。
 ```powershell
-uv run --with pyserial python -m serial.tools.miniterm COM3 115200
+uv run --with mpremote mpremote connect COM3 run blink.py
+```
+
+### MicroPython インタラクティブ REPL 接続
+```powershell
+uv run --with mpremote mpremote connect COM3 repl
+```
+（終了時は `Ctrl + ]`）
+
+### ボード起動時に自動常時実行させたい場合 (`main.py` として書き込み)
+```powershell
+uv run --with mpremote mpremote connect COM3 cp blink.py :main.py
 ```
