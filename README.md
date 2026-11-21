@@ -7,18 +7,24 @@
 | 項目 | 詳細 |
 | :--- | :--- |
 | **接続ポート** | `COM3` |
+| **購入先** | [AliExpress 商品ページ (Item 1005005626482837)](https://ja.aliexpress.com/item/1005005626482837.html) |
 | **USB-シリアル変換チップ** | USB-SERIAL CH340 (`VID: 1A86`, `PID: 7523`) |
-| **チップ種別 (Chip Type)** | ESP32-D0WD-V3 (revision v3.1) |
-| **CPU / 周波数** | Dual Core + LP Core / 最大 240MHz |
+| **チップ種別 (Chip Type)** | ESP32-D0WD-V3 (revision v3.1) / Xtensa LX6 Dual Core |
+| **ボード互換規格** | NodeMCU-32S Lua 30Pin (DOIT DevKit V1 互換) |
+| **動作電圧 / 消費電流** | 2.3V 〜 3.6V (通常 3.3V, VIN/USB給電 5V) / 通常 約 80mA |
+| **CPU / 周波数** | Dual Core + LP Core / 80MHz 〜 240MHz |
 | **内蔵機能 (Features)** | Wi-Fi, Bluetooth (Classic / BLE) |
 | **クリスタル周波数** | 40MHz |
 | **フラッシュメモリ容量** | 4MB (Flash voltage: 3.3V) |
 
-## 基板上のボタン
-- **EN (RST)**: チップのハードウェアリセット（再起動）。フリーズ時や最初からやり直す際に使用。
-- **BOOT (IO0)**: 起動モード切り替え ＆ ユーザー入力（`Pin(0, Pin.IN)` で通常のプッシュスイッチとしても利用可能）。
-
-詳細な内部仕様やコード転送の仕組みは [docs/how-it-works.md](docs/how-it-works.md) を参照してください。
+## ハードウェア・ピンレイアウト
+- **フォームファクタ**: 30ピン（片側15ピン / DOIT DevKit V1 互換）
+- **基板上のボタン**:
+  - **EN (RST)**: チップのハードウェアリセット（再起動）。
+  - **BOOT (IO0)**: 起動モード切り替え ＆ ユーザー入力（`Pin(0, Pin.IN)` で通常のプッシュスイッチとしても利用可能）。
+- 📌 **全ピンの役割・機能早見表**: [docs/pinout.md](docs/pinout.md)
+- 📖 **内部構造・通信の仕組み解説**: [docs/how-it-works.md](docs/how-it-works.md)
+- 📄 **公式スペックシート (PDF)**: [docs/esp32_spec.pdf](docs/esp32_spec.pdf)
 
 ---
 
