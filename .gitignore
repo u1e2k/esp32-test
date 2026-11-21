@@ -1,7 +1,12 @@
 # MicroPython Firmware
 firmware.bin
 
+# Wi-Fi Credentials & Secrets
+wifi_config.py
+secrets.py
+
 # Python cache & uv
 __pycache__/
 .venv/
 .uv/
+

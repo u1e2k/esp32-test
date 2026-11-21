@@ -28,6 +28,8 @@
   - **BOOT (IO0)**: 起動モード切り替え ＆ ユーザー入力（`Pin(0, Pin.IN)` で通常のプッシュスイッチとしても利用可能）。
 - 📌 **全ピンの役割・機能早見表**: [docs/pinout.md](docs/pinout.md)
 - 📖 **内部構造・通信の仕組み解説**: [docs/how-it-works.md](docs/how-it-works.md)
+- 💡 **工作・活用プロジェクトアイデア集**: [docs/ideas.md](docs/ideas.md)
+- 🧪 **初回立ち上げ・IoTダッシュボード実験記録**: [docs/experiment_log_20261121.md](docs/experiment_log_20261121.md)
 - 📄 **公式スペックシート (PDF)**: [docs/esp32_spec.pdf](docs/esp32_spec.pdf)
 
 ---
@@ -57,6 +59,18 @@ uv run mpremote connect COM3 run blink.py
 ```powershell
 uv run mpremote connect COM3 run button_led.py
 ```
+
+### 📱 IoT Webダッシュボード（Wi-Fiアクセスポイント ＆ リアルタイムモニター）
+ESP32をWi-Fi親機（APモード）にし、ブラウザからLED操作や内蔵タッチセンサー・温度をリアルタイム確認できます。
+```powershell
+# 手動実行する場合
+uv run mpremote connect COM3 run web_dashboard.py
+
+# 本体に書き込んで常時稼働させる場合
+uv run mpremote connect COM3 cp web_dashboard.py :main.py
+```
+- **接続先Wi-Fi (SSID)**: `ESP32-Dashboard`（パスワード不要）
+- **ブラウザで開くURL**: `http://192.168.4.1`
 
 ### MicroPython インタラクティブ REPL 接続
 ```powershell
