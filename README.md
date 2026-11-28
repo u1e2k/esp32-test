@@ -123,5 +123,6 @@ uv run mpremote connect COM6 repl
 - 📌 **全ピンの役割・機能早見表**: [docs/pinout.md](docs/pinout.md)
 - 📖 **内部構造・通信の仕組み解説**: [docs/how-it-works.md](docs/how-it-works.md)
 - 💡 **工作・活用プロジェクトアイデア集**: [docs/ideas.md](docs/ideas.md)
-- 🧪 **初回立ち上げ・IoTダッシュボード実験記録**: [docs/experiment_log_20261121.md](docs/experiment_log_20261121.md)
+- 🧪 **初回立ち上げ・IoTダッシュボード実験記録 (ESP32)**: [docs/experiment_log_20261121.md](docs/experiment_log_20261121.md)
+- 🧪 **ESP32-C3 (0.42" OLED) 立ち上げ・Wi-Fi対策記録**: [docs/experiment_log_20261128.md](docs/experiment_log_20261128.md)
 - 📄 **公式スペックシート (PDF)**: [docs/esp32_spec.pdf](docs/esp32_spec.pdf)
